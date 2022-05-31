@@ -1,0 +1,216 @@
+body {
+  font: 4vw "Century Gothic", Futura, sans-serif;
+  margin: 30px;
+}
+
+ol, ul {
+  padding-left: 30px;
+}
+
+.board-row:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.button{
+  background-color: plum;
+  font: 1.8vw "Papyrus", fantasy;
+  margin: 1vw;
+  margin-top: 0;
+  border-radius: 12px;
+}
+
+.reset-button{
+  background-color:blue;
+  font: 2vw "Papyrus", fantasy;
+  margin: 1vw;
+  margin-top: 0;
+  border-radius: 12px;
+  color: white;
+}
+
+.reset-button:hover {
+  background-color: white; /* Green */
+  color: blue;
+}
+
+.bigbutton{
+  background-color: yellow;
+  font: 2vw "Papyrus", fantasy;
+  margin: 1vw;
+  margin-top: 0;
+  border-radius: 15px;
+}
+
+.bigbutton:hover {
+  background-color: white; /* Green */
+  color: blue;
+}
+
+.button:hover {
+  background-color: white; /* Green */
+  color: plum;
+}
+
+.stats2{
+  margin: auto;
+  width: fit-content;
+  display: flex;
+  flex-direction: row;
+}
+
+.stats{
+  position: relative;
+  font: 2.3vw "Papyrus", fantasy;
+  text-align: center;
+  width:fit-content;
+  height:fit-content;
+  background-color: lightblue;
+  margin: 1vw;
+  border-style: double;
+  border-color: black;
+  border-radius: 1vw;
+  line-height: 3vw;
+  border-width: 1vw;
+}
+
+.gameText{
+  margin-left: 1vw;
+  margin-right: 1vw;
+}
+
+.game-board{
+  margin-bottom: 1vw;
+  align-content: center;
+  margin: auto;
+  width: fit-content;
+}
+
+.winnerBanner{
+ margin: 1vw;
+ display: block;
+ justify-content: center;
+ background-color: violet;
+ color: white;
+ font: 3vw "Papyrus", fantasy;
+ text-align: center;
+  height:fit-content
+}
+
+.bannerText{
+  margin-left: 1vw;
+  margin-right: 1vw;
+  margin-top: 1vw;
+}
+
+.game-stats {
+  color: blue;
+  margin-top: 1vw;
+  margin-left: 1vw;
+  margin-right: 1vw;
+  font: 3vw "Papyrus", fantasy;
+}
+
+.squareNoMove {
+  background: lightpink;
+  border: 1px solid #000;
+  float: left;
+  line-height: 8vw;
+  height: 8vw;
+  margin-right: -1px;
+  margin-top: -1px;
+  padding: 0;
+  width: 8vw;
+  position: relative;
+  z-index: -1;
+  max-width: 100px;
+  max-height: 100px;
+}
+
+.squareMove {
+  background: palevioletred;
+  border: 1px solid #000;
+  float: left;
+  line-height: 8vw;
+  height: 8vw;
+  margin-right: -1px;
+  margin-top: -1px;
+  padding: 0;
+  width: 8vw;
+  position: relative;
+  z-index: -1;
+  max-width: 100px;
+  max-height: 100px;
+}
+
+.game {
+ margin: auto;
+ width: fit-content;
+ display: block;
+ justify-content: center;
+}
+
+.black-circle{
+  background-color: black;
+  width: 5vw;
+  height: 5vw;
+  border-radius: 50%;
+  border: 1px solid #000;
+  position: absolute;
+  margin-top: 1.5vw;
+  margin-left: 1.5vw;
+  z-index: 1;
+  max-width: 62.5px;
+  max-height: 62.5px;
+  margin: 1.5%;
+}
+
+@media screen and (min-width: 1200px) {
+  .black-circle { 
+     margin: 19px;
+  } 
+  .stats{
+    font: 30px "Papyrus", fantasy;
+    line-height: 40px;
+  }
+  .game-stats {
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    font: 3vw "Papyrus", fantasy;
+  }
+
+  .gameText{
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+
+.white-circle{
+  background-color: white;
+  width: 5vw;
+  height: 5vw;
+  border-radius: 50%;
+  border: 1px solid #000;
+  margin:1.5%;
+  position: absolute;
+  z-index: -.9;
+  max-width: 62.5px;
+  max-height: 62.5px;
+}
+
+.highlight-square{
+  background: rgb(255, 0, 85);
+  border: 1px solid #000;
+  float: left;
+  height: 8vw;
+  margin-right: -1px;
+  margin-top: -1px;
+  padding: 0;
+  width: 8vw;
+  position: relative;
+  z-index: -1;
+  max-width: 100px;
+  max-height: 100px;
+}
