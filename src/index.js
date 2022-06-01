@@ -315,10 +315,10 @@ class Game extends React.Component {
       if(squares[i] === 'X'){
         boardSquares = this.highlightSquares(i)
         let ableToCapture = this.ableToCapture(i, boardSquares)
-        let boardSquares2 = this.highlightSquares(i)
+        console.log(this.hasH(boardSquares))
         if(ableToCapture !== 0){
           return true
-        } else if(this.hasH(boardSquares2).length > 1 || this.hasH(boardSquares2[0]) === -1){
+        } else if(this.hasH(boardSquares).length > 1 || this.hasH(boardSquares)[0] !== -1){
           return true
         }
       }
@@ -618,7 +618,6 @@ class Game extends React.Component {
     let current = history[history.length - 1];
     let squares = current.squares.slice();
     let boardSquares = current.boardSquares.slice()
-    this.unHighlightSquares()
     console.log("board" + boardSquares)
     let firstFoundIndex = -1;
     let ableToCapture = false;
@@ -747,6 +746,7 @@ class Game extends React.Component {
       y: 0,
       inDoubleCapture: false,
       droppedIndex: -1,
+      areMoreMoves:true,
     });
   }
 
