@@ -3,12 +3,23 @@ import ReactDOM from 'react-dom/client';
 import Draggable from 'react-draggable';
 import './index.css';
 //original setup of checkers
-let pieces = 
+let pieces1 = 
   [' ', 'X', ' ', 'X', ' ', 'X', ' ', 'X',
   'X', ' ', 'X', ' ', 'X', ' ', 'X', ' ',
   ' ', 'X', ' ', 'X', ' ', 'X', ' ', 'X',
   ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ',
   ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ',
+  'O', ' ', 'O', ' ', 'O', ' ', 'O', ' ',
+  ' ', 'O', ' ', 'O', ' ', 'O', ' ', 'O',
+  'O', ' ', 'O', ' ', 'O', ' ', 'O', ' '
+]
+
+let pieces = 
+  [' ', 'X', ' ', 'X', ' ', 'X', ' ', 'X',
+  'X', ' ', 'X', ' ', 'X', ' ', ' ', ' ',
+  ' ', 'X', ' ', 'X', ' ', 'X', ' ', ' ',
+  ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ',
+  ' ', ' ', ' ', 'X', ' ', ' ', ' ', ' ',
   'O', ' ', 'O', ' ', 'O', ' ', 'O', ' ',
   ' ', 'O', ' ', 'O', ' ', 'O', ' ', 'O',
   'O', ' ', 'O', ' ', 'O', ' ', 'O', ' '
@@ -681,12 +692,14 @@ class Game extends React.Component {
       this.unHighlightSquares()
       squares[secondCaptureVal] = ' '
       squares[hPosition] = ' '
+      board[hPosition] = 'B'
       if(hPosition-7 === secondCaptureVal)
         hPosition = secondCaptureVal-7
       else if(hPosition-9 === secondCaptureVal)
         hPosition = secondCaptureVal-9
       numberBlack = numberBlack - 1
       squares[hPosition] = 'O'
+      board[hPosition] = 'B'
     }else{
       squares[hPosition] = 'O'
     }
